@@ -1,22 +1,201 @@
-<p>Simple form</p>
-  
-  <form method="get" action=process.php">
-  <fieldset>
-    <legend>Details</legend>
-    <p>
-      <label>Title: </label>
-      <input type="text" name="title" />
-      </p>
-     <p>
-       <label>Country: </label>
-       <select name="where">
-         <option>Choose a country</option>
-         <option>Canada</option>
-         <option>Finland</option>
-         <option>United States</option>
-       </select>
-     </p>
-    <input type="submit" />
-  </fieldset>
-  </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoStay Resorts - Book Your Stay</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #2e7d32;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #1b5e20;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #81c784;
+            border-radius: 5px;
+        }
+        .form-group input[type="checkbox"],
+        .form-group input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .form-group input[type="submit"],
+        .form-group input[type="reset"],
+        .form-group input[type="button"] {
+            width: auto;
+            padding: 10px 20px;
+            background-color: #388e3c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .form-group input[type="submit"]:hover,
+        .form-group input[type="reset"]:hover,
+        .form-group input[type="button"]:hover {
+            background-color: #2e7d32;
+        }
+        .form-group input[type="color"] {
+            height: 40px;
+            padding: 3px;
+        }
+        .form-group input[type="range"] {
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to EcoStay Resorts</h1>
+        <p>Book your eco-friendly getaway today! Fill out the form below to reserve your stay and let us know your preferences.</p>
+        <form action="#" method="post">
+            
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <!-- Email Input -->
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Tel Input -->
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <!-- Password Input -->
+            <div class="form-group">
+                <label for="password">Create a Password:</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+            </div>
+
+            <!-- Date Input -->
+            <div class="form-group">
+                <label for="checkin">Check-In Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+            </div>
+
+            <!-- Datetime-Local Input -->
+            <div class="form-group">
+                <label for="arrival">Expected Arrival Time:</label>
+                <input type="datetime-local" id="arrival" name="arrival" required>
+            </div>
+
+            <!-- Month Input -->
+            <div class="form-group">
+                <label for="fav-month">Favorite Month to Travel:</label>
+                <input type="month" id="fav-month" name="fav-month">
+            </div>
+
+            <!-- Week Input -->
+            <div class="form-group">
+                <label for="stay-week">Preferred Week of Stay:</label>
+                <input type="week" id="stay-week" name="stay-week">
+            </div>
+
+            <!-- Time Input -->
+            <div class="form-group">
+                <label for="wakeup">Preferred Wake-Up Time:</label>
+                <input type="time" id="wakeup" name="wakeup">
+            </div>
+
+            <!-- Color Input -->
+            <div class="form-group">
+                <label for="room-color">Preferred Room Accent Color:</label>
+                <input type="color" id="room-color" name="room-color" value="#81c784">
+            </div>
+
+            <!-- File Input -->
+            <div class="form-group">
+                <label for="id-proof">Upload ID Proof:</label>
+                <input type="file" id="id-proof" name="id-proof" accept="image/*, .pdf">
+            </div>
+
+            <!-- Range Input -->
+            <div class="form-group">
+                <label for="budget">Budget Range (per night):</label>
+                <input type="range" id="budget" name="budget" min="100" max="1000" step="50">
+            </div>
+
+            <!-- Number Input -->
+            <div class="form-group">
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" max="10" required>
+            </div>
+
+            <!-- Search Input -->
+            <div class="form-group">
+                <label for="search">Search for Activities:</label>
+                <input type="search" id="search" name="search" placeholder="e.g., hiking, yoga">
+            </div>
+
+            <!-- URL Input -->
+            <div class="form-group">
+                <label for="website">Personal Website (optional):</label>
+                <input type="url" id="website" name="website" placeholder="Enter your website URL">
+            </div>
+
+            <!-- Radio Buttons -->
+            <div class="form-group">
+                <label>Room Type:</label>
+                <input type="radio" id="standard" name="room-type" value="standard" checked>
+                <label for="standard">Standard</label>
+                <input type="radio" id="deluxe" name="room-type" value="deluxe">
+                <label for="deluxe">Deluxe</label>
+                <input type="radio" id="suite" name="room-type" value="suite">
+                <label for="suite">Suite</label>
+            </div>
+
+            <!-- Checkbox Input -->
+            <div class="form-group">
+                <label for="newsletter">Subscribe to EcoStay Newsletter:</label>
+                <input type="checkbox" id="newsletter" name="newsletter" checked>
+            </div>
+
+
+            <!-- Hidden Input -->
+            <div class="form-group">
+                <input type="hidden" id="referral" name="referral" value="eco2023">
+            </div>
+
+            <!-- Buttons -->
+            <div class="form-group">
+                <input type="submit" value="Book Now">
+                <input type="reset" value="Clear Form">
+                <input type="button" value="View Offers" onclick="alert('Special Offers Coming Soon!')">
+            </div>
+        </form>
+    </div>
+   <a href="index.html">Back to Home</a>
+</body>
+</html>
 
