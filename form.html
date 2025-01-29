@@ -70,6 +70,30 @@
     </style>
 </head>
 <body>
+    <p>Simple form</p>
+  
+  <form method="get" action=process.php">
+  <fieldset>
+    <legend>Details</legend>
+    <p>
+      <label>Title: </label>
+      <input type="text" name="title" />
+      </p>
+     <p>
+       <label>Country: </label>
+       <select name="where">
+         <option>Choose a country</option>
+         <option>Canada</option>
+         <option>Finland</option>
+         <option>United States</option>
+       </select>
+     </p>
+    <input type="submit" />
+  </fieldset>
+  </form>
+
+
+    
     <div class="container">
         <h1>Welcome to EcoStay Resorts</h1>
         <p>Book your eco-friendly getaway today! Fill out the form below to reserve your stay and let us know your preferences.</p>
