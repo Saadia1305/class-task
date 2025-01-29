@@ -219,6 +219,111 @@
             </div>
         </form>
     </div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USIU Advanced Web Development Evaluation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="url"], textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>USIU Advanced Web Development Evaluation Form</h1>
+    <form>
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+        </div>
+        <div class="form-group">
+            <label for="studentID">Student ID:</label>
+            <input type="text" id="studentID" name="studentID" placeholder="Enter your USIU Student ID">
+        </div>
+        <div class="form-group">
+            <label for="email">USIU Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your USIU email">
+        </div>
+        <div class="form-group">
+            <label for="github">GitHub Profile URL:</label>
+            <input type="url" id="github" name="github" placeholder="Enter your GitHub profile URL">
+        </div>
+        <div class="form-group">
+            <label for="phone">Local Phone Number (WhatsApp-enabled):</label>
+            <input type="text" id="phone" name="phone" placeholder="+2547XX-XXX-XXX">
+        </div>
+        <div class="form-group">
+            <label for="problemSolving">1. Nairobi-Specific Problem Solving:</label>
+            <textarea id="problemSolving" name="problemSolving" rows="4" placeholder="Describe your API security and scalability solution for Nairobi matatu integration"></textarea>
+        </div>
+        <div class="form-group">
+            <label>2. Select the best JavaScript framework for real-time Nairobi news aggregation:</label>
+            <input type="text" name="jsFramework" value="React.js" readonly>
+        </div>
+        <div class="form-group">
+            <label>3. Which Laravel optimization method is best for a Nairobi e-commerce startup?</label>
+            <input type="checkbox" id="caching" name="optimization" value="Database Caching">
+            <label for="caching">Database Caching</label><br>
+            <input type="checkbox" id="queues" name="optimization" value="Queues & Job Scheduling">
+            <label for="queues">Queues & Job Scheduling</label><br>
+            <input type="checkbox" id="scaling" name="optimization" value="Horizontal Scaling">
+            <label for="scaling">Horizontal Scaling</label>
+        </div>
+        <div class="form-group">
+            <label for="projectLink">4. Upload a link to a past web project (PDF/Screenshot):</label>
+            <input type="file" id="projectLink" name="projectLink">
+        </div>
+        <div class="form-group">
+            <label for="hosting">5. Select a Kenyan hosting provider that supports M-Pesa payments:</label>
+            <input type="text" id="hosting" name="hosting" value="Safaricom Cloud" readonly>
+        </div>
+        <div class="form-group">
+            <label for="optimization">6. How would you optimize a web app for Nairobi users on 2G/3G networks?</label>
+            <textarea id="optimization" name="optimization" rows="4" placeholder="Explain using PMA, lazy loading, and CDN strategies"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="startups">7. Name two Kenyan tech startups actively hiring full-stack developers:</label>
+            <input type="text" id="startups" name="startups" placeholder="Example: Cellulant, Twiga Foods">
+        </div>
+        <div class="form-group">
+            <label for="freelancing">8. Name two Kenyan freelancing platforms for web developers besides Upwork/Fiverr:</label>
+            <input type="text" id="freelancing" name="freelancing" placeholder="Example: Kuhustle, WorkPay Africa">
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="certify" name="certify">
+            <label for="certify">I certify that all responses are original and not AI-generated.</label>
+        </div>
+        <button type="submit" class="submit-btn">Submit Form</button>
+    </form>
+</body>
+</html>
+    
    <a href="index.html">Back to Home</a>
 </body>
 </html>
